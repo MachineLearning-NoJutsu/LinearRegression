@@ -11,7 +11,7 @@ def univariate_gradient_descent(X, Y, theta_0, theta_1, alpha, iteration):
  
     for i in range(iteration): #Iterate by the number of iteration
         
-        predicted = np.dot(X,thetas_m) # Use matrix by matrix multiplcation to find predicted value
+        predicted = np.dot(X,thetas_m) # Use matrix by matrix multiplication to find predicted value
         error = np.subtract(predicted,Y) # Calculate the error
         
         sigma1 = sum(error) 
@@ -25,6 +25,6 @@ def univariate_gradient_descent(X, Y, theta_0, theta_1, alpha, iteration):
     print(temp0, temp1)
         
 
-X = np.array([[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]]).transpose()
+X = np.array([[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]]).transpose() # Transposing the matrix to change it from an N by 1 Matrix to 1 by N matrix
 Y = np.array([0.3, 0.33, 0.36, 0.39, 0.42, 0.45, 0.48, 0.51, 0.54, 0.57, 0.6])
 univariate_gradient_descent(X, Y, 1,1,1,10000)
